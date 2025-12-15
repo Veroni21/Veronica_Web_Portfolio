@@ -1,5 +1,5 @@
 // Include emailjs.init with your user (public) ID (replace below)
-emailjs.init('kVGma4HsmAdY25sd7');
+emailjs.init('9kOvZoquZO_aDCzcl');
 
 // Scroll down arrow: scrolls to About section
 document.getElementById('scroll-down').addEventListener('click', () => {
@@ -52,7 +52,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
   }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alertBox.style.color = '#cf6679';
+    alertBox.style.color = '#9b73d4ff';
     alertBox.textContent = 'Please enter a valid email address.';
     return;
   }
@@ -67,13 +67,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     message: message,
   };
 
-   emailjs.send('service_ediljie', 'template_k6d6aho', templateParams)
+   emailjs.send('service_9gqtrr2', 'template_rhdiuhw', templateParams)
     .then(() => {
       alertBox.style.color = '#03dac5'; // teal success
       alertBox.textContent = 'Thank you! Your message has been sent.';
       this.reset();
     }).catch(error => {
-      alertBox.style.color = '#cf6679';
+      alertBox.style.color = '#ab79deff';
       alertBox.textContent = 'Failed to send message. Please try again later.';
       console.error('EmailJS error:', error);
     });
